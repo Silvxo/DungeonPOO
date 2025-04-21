@@ -4,6 +4,9 @@
 #include <limits>
 
 #include "LeitorArquivo.h"
+#include "Save.h"
+
+Save save;
 
 LeitorArquivo leitorArquivo;
 
@@ -13,6 +16,7 @@ int main() {
         // 1 -> Nova Aventura
         // 2 -> Carregar Aventura
     leitorArquivo.exibirCena("menu");
+    save.saveGame();
     
     int cena = 1;
     const int totalCenas = 10;
